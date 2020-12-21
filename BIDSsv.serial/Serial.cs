@@ -18,9 +18,11 @@ namespace TR.BIDSsv
     Serial_DeviceCom sdc = null;
     private bool IsBinaryAllowed = false;
 
+    SerialPort SP = new SerialPort();
     public bool Connect(in string args)
     {
-      SerialPort SP = new SerialPort();
+      if (SP.IsOpen)
+        SP.Close();//開いてるなら, 閉じてから
 
       SP.BaudRate = 19200;
       SP.RtsEnable = true;
@@ -195,22 +197,28 @@ namespace TR.BIDSsv
           }
         }
       }
-      try
+      if (sdc is null)
       {
-        sdc = new Serial_DeviceCom(SP);
+        try
+        {
+          sdc = new Serial_DeviceCom(SP);
 
-        Console.WriteLine(Name + " : " + sdc.IsOpen);
+          Console.WriteLine(Name + " : " + sdc.IsOpen);
 
-        sdc.StringDataReceived += Sdc_StringDataReceived;
-        sdc.BinaryDataReceived += Sdc_BinaryDataReceived;
+          sdc.StringDataReceived += Sdc_StringDataReceived;
+          sdc.BinaryDataReceived += Sdc_BinaryDataReceived;
 
 
+        }
+        catch (Exception e)
+        {
+          Console.WriteLine("{0} : an exception has occured in the init section.\n{1}", Name, e);
+          return false;
+        }
       }
-      catch(Exception e)
-      {
-        Console.WriteLine("{0} : an exception has occured in the init section.\n{1}", Name, e);
-        return false;
-      }
+      else
+        sdc.ReConnect();//再度の呼び出し時には再接続扱いとする
+
       sdc.ReConnectWhenTimedOut = ReConnectWhenTimedOut;
       sdc.IamAliveCMD = AliveCMD;
       return sdc.IsOpen;
