@@ -41,11 +41,12 @@ namespace TR.BIDSsv
 		private void CloseButton_Click(object sender, RoutedEventArgs e)//With Save
 		{
 			File.WriteAllText(path, sw_d.CMD);
+			Close();
 		}
 
 		private void CancelButton_Click(object sender, RoutedEventArgs e)//With NoSave
 		{
-			//Do Nothing
+			Close();
 		}
 
 		public void Dispose() => ((IDisposable)serial).Dispose();
