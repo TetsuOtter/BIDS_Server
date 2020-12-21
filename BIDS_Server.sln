@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BIDSsv.testmod", "BIDSsv.te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BIDSsv.blankmod", "BIDSsv.blankmod\BIDSsv.blankmod.csproj", "{5C51776C-C1E8-4CBD-8316-FC670610323D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIDSsv.bvets_id", "BIDSsv.bvets_id\BIDSsv.bvets_id.csproj", "{7936ABBA-636C-4C59-94BE-11BE1D01BB7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,18 @@ Global
 		{5C51776C-C1E8-4CBD-8316-FC670610323D}.Release|x64.Build.0 = Release|x64
 		{5C51776C-C1E8-4CBD-8316-FC670610323D}.Release|x86.ActiveCfg = Release|x86
 		{5C51776C-C1E8-4CBD-8316-FC670610323D}.Release|x86.Build.0 = Release|x86
+		{7936ABBA-636C-4C59-94BE-11BE1D01BB7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7936ABBA-636C-4C59-94BE-11BE1D01BB7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7936ABBA-636C-4C59-94BE-11BE1D01BB7D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7936ABBA-636C-4C59-94BE-11BE1D01BB7D}.Debug|x64.Build.0 = Debug|Any CPU
+		{7936ABBA-636C-4C59-94BE-11BE1D01BB7D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7936ABBA-636C-4C59-94BE-11BE1D01BB7D}.Debug|x86.Build.0 = Debug|Any CPU
+		{7936ABBA-636C-4C59-94BE-11BE1D01BB7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7936ABBA-636C-4C59-94BE-11BE1D01BB7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7936ABBA-636C-4C59-94BE-11BE1D01BB7D}.Release|x64.ActiveCfg = Release|Any CPU
+		{7936ABBA-636C-4C59-94BE-11BE1D01BB7D}.Release|x64.Build.0 = Release|Any CPU
+		{7936ABBA-636C-4C59-94BE-11BE1D01BB7D}.Release|x86.ActiveCfg = Release|Any CPU
+		{7936ABBA-636C-4C59-94BE-11BE1D01BB7D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

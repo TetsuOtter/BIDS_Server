@@ -1,0 +1,22 @@
+﻿<Window x:Class="TR.BIDSsv.SettingWindow"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				mc:Ignorable="d"
+				Title="SettingWindow" Height="300" Width="500" WindowStyle="ToolWindow">
+	<StackPanel Margin="10">
+		<TextBlock Text="BIDSsv.bvets_id - Serial Setting" FontWeight="Bold" FontSize="24"/>
+		<TextBlock Text="入力するコマンド" Margin="4"/>
+		<TextBox Margin="4" Text="{Binding CMD, Mode=TwoWay}"/>
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+			<Button Content="Close" Click="CloseButton_Click" Padding="5" Margin="10"/>
+			<Button Content="Reconnect" Click="ReConnectButton_Click" Padding="5" Margin="10" HorizontalAlignment="Left"/>
+			<Button Content="Cancel" Click="CancelButton_Click" Padding="5" Margin="10" HorizontalAlignment="Left"/>
+		</StackPanel>
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+			<TextBlock Text="BIDS Shared Memory : " VerticalAlignment="Center"/>
+			<Ellipse Height="30" Width="30" Fill="{Binding IsBIDSConnected, Mode=OneWay}"/>
+		</StackPanel>
+	</StackPanel>
+</Window>

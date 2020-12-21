@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>net4.7.2</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>TR.BIDSsv.bvets_id</AssemblyName>
+    <RootNamespace>TR.BIDSsv</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BIDSsv.serial\BIDSsv.serial.csproj" />
+    <ProjectReference Include="..\BIDSsv\BIDSsv.csproj" />
+    <ProjectReference Include="..\IBIDSsv\IBIDSsv.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mackoy.IInputDevice">
+      <HintPath>C:\Program Files (x86)\mackoy\BveTs5\Mackoy.IInputDevice.DLL</HintPath>
+    </Reference>
+		<Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="SettingWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
+</Project>
